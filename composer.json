@@ -1,0 +1,41 @@
+{
+    "name": "sculpt/apidoc",
+    "description": "Powerful and clean API documentation generator for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dustun",
+            "email": "imranimranov0909@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/routing": "^10.0|^11.0|^12.0",
+        "spatie/laravel-data": "^4.20"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sculpt\\ApiDoc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sculpt\\ApiDoc\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sculpt\\ApiDoc\\ApiDocServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
