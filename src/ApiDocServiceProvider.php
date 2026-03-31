@@ -15,15 +15,15 @@ class ApiDocServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        if (!config('sculpt-apidoc.enabled', true)) {
+        if (!config('sculpt.enabled', true)) {
             return;
         }
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/sculpt-apidoc.php', 'sculpt-apidoc');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sculpt.php', 'sculpt');
 
         $this->publishes([
-            __DIR__ . '/../config/sculpt-apidoc.php' => config_path('sculpt-apidoc.php'),
-        ], 'sculpt-apidoc-config');
+            __DIR__ . '/../config/sculpt.php' => config_path('sculpt.php'),
+        ], 'sculpt-config');
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/api-doc.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sculpt');
